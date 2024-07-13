@@ -63,9 +63,9 @@ int main(void)
 		  HD44780_SetCursor(0,0);
 		  HD44780_PrintStr("Motion Detected");
 
-		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, set);
 		  HAL_Delay(300);
-		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, RESET);
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, reset);
 	  }
 	  else{
 		  HD44780_Clear();

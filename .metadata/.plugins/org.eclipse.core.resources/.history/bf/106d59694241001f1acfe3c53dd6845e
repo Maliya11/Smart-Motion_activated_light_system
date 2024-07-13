@@ -59,18 +59,14 @@ int main(void)
   while (1)
   {
 	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0)){
-		  HD44780_Clear();
 		  HD44780_SetCursor(0,0);
 		  HD44780_PrintStr("Motion Detected");
-
-		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, Set);
 		  HAL_Delay(300);
-		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, RESET);
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, Reset);
 	  }
 	  else{
-		  HD44780_Clear();
-		  HD44780_SetCursor(0,0);
-		  HD44780_PrintStr("No motion Detected");
+
 	  }
   }
 
