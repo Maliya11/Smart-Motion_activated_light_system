@@ -41,19 +41,8 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
 
-  /*Initialize the LCD display*/
   HD44780_Init(2);
   HD44780_Clear();
-  HD44780_SetCursor(0,0);
-  HD44780_Backlight();
-
-  /*Starting string*/
-  HD44780_PrintStr("Smart Motion Activated Light is now online");
-  for(int crnt=1; crnt<42; crnt++)
-  {
-	  HD44780_ScrollDisplayLeft();
-	  HAL_Delay(500);
-  }
 
   /* Infinite loop */
   while (1)

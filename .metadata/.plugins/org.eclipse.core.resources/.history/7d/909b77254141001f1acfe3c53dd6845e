@@ -49,11 +49,11 @@ int main(void)
 
   /*Starting string*/
   HD44780_PrintStr("Smart Motion Activated Light is now online");
-  for(int crnt=1; crnt<42; crnt++)
-  {
+  int crnt;
+  for(int crnt=1; crnt<45; crnt++){
 	  HD44780_ScrollDisplayLeft();
-	  HAL_Delay(500);
   }
+
 
   /* Infinite loop */
   while (1)

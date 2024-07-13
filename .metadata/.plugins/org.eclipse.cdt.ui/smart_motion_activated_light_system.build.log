@@ -1,4 +1,4 @@
-23:09:55 **** Incremental Build of configuration Debug for project smart_motion_activated_light_system ****
+23:27:27 **** Incremental Build of configuration Debug for project smart_motion_activated_light_system ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "smart_motion_activated_light_system.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\projects\Smart-Motion_activated_light_system\smart_motion_activated_light_system\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="smart_motion_activated_light_system.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -6,9 +6,9 @@ Finished building target: smart_motion_activated_light_system.elf
  
 arm-none-eabi-size  smart_motion_activated_light_system.elf 
 arm-none-eabi-objdump -h -S smart_motion_activated_light_system.elf  > "smart_motion_activated_light_system.list"
-arm-none-eabi-objcopy  -O ihex smart_motion_activated_light_system.elf  "smart_motion_activated_light_system.hex"
    text	   data	    bss	    dec	    hex	filename
-   5468	     20	   1652	   7140	   1be4	smart_motion_activated_light_system.elf
+   8424	     36	   1660	  10120	   2788	smart_motion_activated_light_system.elf
+arm-none-eabi-objcopy  -O ihex smart_motion_activated_light_system.elf  "smart_motion_activated_light_system.hex"
 Finished building: default.size.stdout
  
 Finished building: smart_motion_activated_light_system.hex
@@ -16,5 +16,5 @@ Finished building: smart_motion_activated_light_system.hex
 Finished building: smart_motion_activated_light_system.list
  
 
-23:09:55 Build Finished. 0 errors, 0 warnings. (took 789ms)
+23:27:28 Build Finished. 0 errors, 0 warnings. (took 725ms)
 
