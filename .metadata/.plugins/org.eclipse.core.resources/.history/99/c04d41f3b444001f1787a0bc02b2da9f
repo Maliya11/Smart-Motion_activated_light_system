@@ -42,35 +42,35 @@ int main(void)
   MX_I2C1_Init();
 
   /*Initialize the LCD display*/
-//  HD44780_Init(2);
-//  HD44780_Clear();
-//  HD44780_SetCursor(0,0);
-//  HD44780_Backlight();
+  HD44780_Init(2);
+  HD44780_Clear();
+  HD44780_SetCursor(0,0);
+  HD44780_Backlight();
 
   /*Starting string*/
-//  HD44780_PrintStr("Smart Motion Activated Light is now online");
-//  for(int crnt=1; crnt<42; crnt++)
-//  {
-//	  HD44780_ScrollDisplayLeft();
-//	  HAL_Delay(500);
-//  }
+  HD44780_PrintStr("Smart Motion Activated Light is now online");
+  for(int crnt=1; crnt<42; crnt++)
+  {
+	  HD44780_ScrollDisplayLeft();
+	  HAL_Delay(500);
+  }
 
   /* Infinite loop */
   while (1)
   {
 	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0)){
-//		  HD44780_Clear();
-//		  HD44780_SetCursor(0,0);
-//		  HD44780_PrintStr("Motion Detected");
+		  HD44780_Clear();
+		  HD44780_SetCursor(0,0);
+		  HD44780_PrintStr("Motion Detected");
 
 		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
 		  HAL_Delay(300);
 		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, RESET);
 	  }
 	  else{
-//		  HD44780_Clear();
-//		  HD44780_SetCursor(0,0);
-//		  HD44780_PrintStr("No motion Detected");
+		  HD44780_Clear();
+		  HD44780_SetCursor(0,0);
+		  HD44780_PrintStr("No motion Detected");
 	  }
   }
 
